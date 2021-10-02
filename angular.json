@@ -75,7 +75,8 @@
               "browserTarget": "my-secondary-app:build:production"
             },
             "development": {
-              "browserTarget": "my-secondary-app:build:development"
+              "browserTarget": "my-secondary-app:build:development",
+              "proxyConfig": "src/proxy.conf.json"
             }
           },
           "defaultConfiguration": "development"
