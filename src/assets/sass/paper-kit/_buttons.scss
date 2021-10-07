@@ -44,10 +44,16 @@
     &.btn-sm{
         padding: 4px !important;
     }
-    i{
+    i {
         font-size: $font-size-medium;
         padding: 2px 0px;
     }
+    fa-icon {
+      font-size: $font-size-medium;
+      padding: auto;
+      margin: auto;
+      vertical-align: -0.2em;
+  }
 }
 .upgrade-pro{
     .btn{
@@ -167,7 +173,7 @@
         min-width: 30px;
         padding: 0;
 
-        i{
+        i, fa-icon {
             font-size: $font-size-small;
 
         }
