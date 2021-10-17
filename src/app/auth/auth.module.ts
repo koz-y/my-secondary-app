@@ -1,10 +1,13 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { FormsModule } from '@angular/forms';
+import { AuthRoutingModule } from './auth-routing.module';
+import { FaIconLibrary, FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+
 import { RegisterComponent } from './register/register.component';
 import { LoginComponent } from './login/login.component';
-import { AuthRoutingModule } from './auth-routing.module';
+
 import { AuthService } from './service/auth.service';
-import { FaIconLibrary, FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { fab } from '@fortawesome/free-brands-svg-icons';
 
 
@@ -16,6 +19,7 @@ import { fab } from '@fortawesome/free-brands-svg-icons';
   ],
   imports: [
     CommonModule,
+    FormsModule,
     FontAwesomeModule,
     AuthRoutingModule
   ],
