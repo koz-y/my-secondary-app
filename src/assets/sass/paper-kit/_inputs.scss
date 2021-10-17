@@ -158,19 +158,20 @@ textarea.form-control{
     @include transition(300ms, linear);
   }
   &.input-group-focus {
-    .input-group-prepend .input-group-text {
-      border: 1px solid $dark-gray !important;
-    }
-    .input-group-append .input-group-text {
-      border: 1px solid $dark-gray !important;
-    }
+    border: 1px solid $dark-gray !important;
+    // .input-group-prepend .input-group-text {
+    //   border: 1px solid $dark-gray !important;
+    // }
+    // .input-group-append .input-group-text {
+    //   border: 1px solid $dark-gray !important;
+    // }
   }
   &.form-group-no-border{
 
     .input-group-prepend .input-group-text{
       border-right: transparent !important;
       background: $white-color !important;
-        border: 1px solid $white-color !important;
+        border: 1px solid $white-color;
       @include transition(300ms, linear);
     }
     .input-group-append .input-group-text{
