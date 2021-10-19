@@ -50,7 +50,7 @@ router.post('/login', (req, res) => {
     // ユーザー認証OKならJWTを返す
     // const token = "I am JsonWebToken"
     const token = jwt.sign({
-      userid: foundUser._id,
+      userId: foundUser._id,
       username: foundUser.username
     }, config.SECRET, { expiresIn: '1h' });
 
