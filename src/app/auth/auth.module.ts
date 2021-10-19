@@ -9,6 +9,9 @@ import { LoginComponent } from './login/login.component';
 
 import { AuthService } from './service/auth.service';
 import { fab } from '@fortawesome/free-brands-svg-icons';
+import { AuthGuard } from './service/auth.guard';
+import { HTTP_INTERCEPTORS } from '@angular/common/http';
+import { TokenInterceptor } from './service/token.interceptor';
 
 
 
@@ -24,7 +27,13 @@ import { fab } from '@fortawesome/free-brands-svg-icons';
     AuthRoutingModule
   ],
   providers: [
-    AuthService
+    AuthService,
+    AuthGuard,
+    {
+      provide: HTTP_INTERCEPTORS,
+      useClass: TokenInterceptor,
+      multi: true
+    }
   ]
 
 })

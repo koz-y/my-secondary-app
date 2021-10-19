@@ -2,6 +2,12 @@ const express = require('express')
 const router = express.Router()
 
 const Product = require('../model/product')
+const UserCtl = require('../controllers/user')
+
+// Authorizedテスト用
+// router.get('/secret', UserCtl.authMiddleware, (req, res) => {
+//   return res.json({"secret" : true})
+// })
 
 // 一覧取得
 router.get('', (req, res) => {
@@ -11,7 +17,7 @@ router.get('', (req, res) => {
 })
 
 // 個別プロダクト
-router.get('/:productId', (req, res) => {
+router.get('/:productId', UserCtl.authMiddleware, (req, res) => {
   const myProductId = req.params.productId
   Product.findById(myProductId, (err, foundProduct ) => {
     if(err) {
